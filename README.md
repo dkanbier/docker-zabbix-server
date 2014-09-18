@@ -1,13 +1,13 @@
-Docker Zabbix MySQL
+Docker Zabbix Server
 ========================
 
 ## Container 
 
-This container provides a mysql instance. 
+This container provides a zabbix_server instance. 
 
-It's designed to be used in conjunction with other containers and data-only containers and provides only 1 process: mysqld_safe.
+It's designed to be used in conjunction with other containers and data-only containers and provides only 1 process: zabbix_server.
 
-The idea is to use this container with docker-zabbix-server and docker-zabbix-web to form a working Zabbix installation, following the Docker principle of only using 1 process per container.
+The idea is to use this container with docker-zabbix-mysql and docker-zabbix-web to form a working Zabbix installation, following the Docker principle of only using 1 process per container.
 
 ## Usage
 
