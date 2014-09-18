@@ -16,13 +16,13 @@ This is an example to create a working Zabbix 2.4 server using docker-zabbix-ser
 Create a data-only container to hold the actual database data:
 
 ````
-docker run -v /var/lib/mysql -name zabbix-data busybox true
+docker run -v /var/lib/mysql --name zabbix-data busybox true
 `````
 
 Pull and build docker-zabbix-server:
 
 ````
-git clone git://github.com/dkanbier/docker-zabbix-server .
+git clone git://github.com/dkanbier/docker-zabbix-server
 cd docker-zabbix-server
 docker build -t dkanbier/zabbix-server .
 `````
@@ -30,7 +30,7 @@ docker build -t dkanbier/zabbix-server .
 Pull and build docker-zabbix-mysql:
 
 ````
-git clone git://github.com/dkanbier/docker-zabbix-mysql .
+git clone git://github.com/dkanbier/docker-zabbix-mysql 
 cd docker-zabbix-mysql
 docker build -t dkanbier/zabbix-db .
 ````
@@ -38,7 +38,7 @@ docker build -t dkanbier/zabbix-db .
 Pull and build docker-zabbix-web:
 
 ````
-git clone git://github.com/dkanbier/docker-zabbix-web .
+git clone git://github.com/dkanbier/docker-zabbix-web 
 cd docker-zabbix-web
 docker build -t dkanbier/zabbix-web .
 ````
