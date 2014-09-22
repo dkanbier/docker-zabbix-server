@@ -23,24 +23,21 @@ Pull and build docker-zabbix-server:
 
 ````
 git clone git://github.com/dkanbier/docker-zabbix-server .
-cd docker-zabbix-server
-docker build -t dkanbier/zabbix-server .
+docker build -t dkanbier/zabbix-server docker-zabbix-server/
 `````
 
 Pull and build docker-zabbix-mysql:
 
 ````
 git clone git://github.com/dkanbier/docker-zabbix-mysql .
-cd docker-zabbix-mysql
-docker build -t dkanbier/zabbix-db .
+docker build -t dkanbier/zabbix-db docker-zabbix-mysql/
 ````
 
 Pull and build docker-zabbix-web:
 
 ````
 git clone git://github.com/dkanbier/docker-zabbix-web .
-cd docker-zabbix-web
-docker build -t dkanbier/zabbix-web .
+docker build -t dkanbier/zabbix-web docker-zabbix-web/
 ````
 
 Now we have every component of Zabbix in a separate container, ready to start:
