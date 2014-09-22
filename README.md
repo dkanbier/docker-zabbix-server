@@ -16,7 +16,7 @@ This is an example to create a working Zabbix 2.4 server using docker-zabbix-ser
 Create a data-only container to hold the actual database data:
 
 ````
-docker run -v /var/lib/mysql -name zabbix-data busybox true
+docker run -v /var/lib/mysql --name zabbix-data busybox true
 `````
 
 Pull and build docker-zabbix-server:

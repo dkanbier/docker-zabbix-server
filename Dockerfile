@@ -12,16 +12,9 @@ RUN yum makecache
 # Installing SNMP Utils
 RUN yum -y -q install net-snmp-devel net-snmp-libs net-snmp net-snmp-perl net-snmp-python net-snmp-utils
 
-# This is needed because documentation is not installed otherwise and we need the mysql
-# create scripts in there. 
-RUN mv /etc/rpm/macros.imgcreate /tmp
-
 # Install zabbix server and php frontend
 ADD ./zabbix/zabbix-server-mysql-2.4.0-1.el6.x86_64.rpm /tmp/zabbix-server-mysql-2.4.0-1.el6.x86_64.rpm
 RUN yum -y -q localinstall --nogpgcheck /tmp/zabbix-server-mysql-2.4.0-1.el6.x86_64.rpm
-
-# Revert the previous workaround
-RUN mv /tmp/macros.imgcreate /etc/rpm/
 
 # Cleaining up.
 RUN yum clean all
