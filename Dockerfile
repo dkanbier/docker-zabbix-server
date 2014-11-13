@@ -1,4 +1,4 @@
-FROM centos
+FROM centos:centos6
 MAINTAINER Dennis Kanbier <dennis@kanbier.net>
 
 # Update base images.
