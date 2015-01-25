@@ -9,6 +9,8 @@ It's designed to be used in conjunction with other containers and data-only cont
 
 The idea is to use this container with docker-zabbix-mysql and docker-zabbix-web to form a working Zabbix installation, following the Docker principle of only using 1 process per container.
 
+The zabbix-server binary bundled with this Git repository is patched with https://support.zabbix.com/browse/ZBXNEXT-611 to enable the server process to run in the foreground.
+
 ## Usage
 
 This is an example to create a working Zabbix 2.4 server using docker-zabbix-server.
@@ -69,4 +71,4 @@ dc1b4fbd756f        dkanbier/zabbix-server:latest   /usr/sbin/zabbix_ser   10051
 7b956c5cd7eb        dkanbier/zabbix-db:latest       /bin/bash /start.sh    3306/tcp
 ````
 
-And the Zabbix GUI should be availabe on port the exposed port 80.
+And the Zabbix GUI should be availabe on the exposed port 80.
