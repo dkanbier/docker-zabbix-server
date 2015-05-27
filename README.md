@@ -71,4 +71,8 @@ dc1b4fbd756f        dkanbier/zabbix-server:latest   /usr/sbin/zabbix_ser   10051
 7b956c5cd7eb        dkanbier/zabbix-db:latest       /bin/bash /start.sh    3306/tcp
 ````
 
-And the Zabbix GUI should be availabe on the exposed port 80.
+And the Zabbix GUI should be availabe on the exposed port 80 in path `/zabbix`:
+
+```
+open http://`boot2docker ip`:80/zabbix
+```
